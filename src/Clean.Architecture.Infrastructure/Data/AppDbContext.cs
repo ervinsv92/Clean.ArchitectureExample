@@ -19,8 +19,9 @@ public class AppDbContext : DbContext
 
   public DbSet<ToDoItem> ToDoItems => Set<ToDoItem>();
   public DbSet<Product> Products => Set<Product>();
+    public DbSet<Person> Persons => Set<Person>();
 
-  protected override void OnModelCreating(ModelBuilder modelBuilder)
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
   {
     base.OnModelCreating(modelBuilder);
     modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());

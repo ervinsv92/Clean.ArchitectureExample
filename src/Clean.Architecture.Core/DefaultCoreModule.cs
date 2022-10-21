@@ -12,5 +12,7 @@ public class DefaultCoreModule : Module
             .As<IToDoItemSearchService>().InstancePerLifetimeScope();
         builder.RegisterType<ProductServices>()
         .As<IProductServices>().InstancePerLifetimeScope();
+        builder.RegisterType<PersonServices>()
+        .As<IPersonServices>().InstancePerLifetimeScope();
     }
 }
