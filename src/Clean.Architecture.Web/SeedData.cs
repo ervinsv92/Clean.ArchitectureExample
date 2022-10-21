@@ -34,28 +34,28 @@ public static class SeedData
         return;   // DB has been seeded
       }
 
-      PopulateTestData(dbContext);
+      //PopulateTestData(dbContext);
 
 
     }
   }
-  public static void PopulateTestData(AppDbContext dbContext)
-  {
-    foreach (var item in dbContext.Projects)
-    {
-      dbContext.Remove(item);
-    }
-    foreach (var item in dbContext.ToDoItems)
-    {
-      dbContext.Remove(item);
-    }
-    dbContext.SaveChanges();
+  //public static void PopulateTestData(AppDbContext dbContext)
+  //{
+  //  foreach (var item in dbContext.Projects)
+  //  {
+  //    dbContext.Remove(item);
+  //  }
+  //  foreach (var item in dbContext.ToDoItems)
+  //  {
+  //    dbContext.Remove(item);
+  //  }
+  //  dbContext.SaveChanges();
 
-    TestProject1.AddItem(ToDoItem1);
-    TestProject1.AddItem(ToDoItem2);
-    TestProject1.AddItem(ToDoItem3);
-    dbContext.Projects.Add(TestProject1);
+  //  TestProject1.AddItem(ToDoItem1);
+  //  TestProject1.AddItem(ToDoItem2);
+  //  TestProject1.AddItem(ToDoItem3);
+  //  dbContext.Projects.Add(TestProject1);
 
-    dbContext.SaveChanges();
-  }
+  //  dbContext.SaveChanges();
+  //}
 }
